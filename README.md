@@ -96,3 +96,4 @@ One of the menus.
 ### Issues & ToDo
 - No1: Add a menu version number.
 - No2: ans_menu.ini writes a funny file as it switches from menu to menu.
+- No3: More instructions of Ansible variables, hosts, playbooks.
