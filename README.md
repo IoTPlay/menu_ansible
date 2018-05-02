@@ -11,7 +11,7 @@ So, we set off on a journey to find the right tool to do this, Open source was i
 But the open source version lacks menu structures, etc, essentially one run the playbooks, with all the command line options from the Terminal. This menu system has 2 lines per menu, a human readable line, displayed on the menu, and the ansible, or other sh-script command line to execute the playbook.
 
 ### My Environment
-I use a Mac, and manage Raspberry Pi's, both from my home LAN, and over the Internet with the menu structure.
+We use Apple Macs, and manage Raspberry Pi's, both from my home LAN, and over the Internet with the menu structure.
 
 ### Knowing Ansible
 
@@ -22,11 +22,11 @@ When we learned Ansible, we made cryptic notes, with links to other sources. May
 
 ### Command Line System Features
 
-### The Menu system.
+### The Menu system
 
-Several setup files are required.,
+Several setup files are required:
 
-|#|File     | what it Does
+|#|File     | what it does
 |-|---------|--------------
 |1|ans_0.ini|Stores var's on ansible hosts file, var_files, playbooks, etc.
 |2|ans_1.ini|the first menu (if you only require one, next not needed)
@@ -90,7 +90,9 @@ One of the menus.
 ----------------------------------------------------------------------
 ```
 ### Version Tracker
-- version 1:
+- version 1: This version.
 
 
 ### Issues & ToDo
+- No1: Add a menu version number.
+- No2: ans_menu.ini writes a funny file as it switches from menu to menu.
