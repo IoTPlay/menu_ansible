@@ -35,7 +35,19 @@ Several setup files are required.,
 |5|ans.sh| The code that runs the menu|
 
 ### Instructions to Install the Ansible menu Scripts
-todo
+
+1. Clone this repo to local
+2. Update the variables as per instructions in these files, about your file locations in ans_0.ini, ans_x.ini, and ans.sh.
+3. The instructions, replace:
+    - `<user>` with the user of the O/S  (We use Mac)
+    - `<Git_xxx>` - a local folder where you want to keep all the Ansible scripts in. I use a folder which I replicate back to Git.
+
+4. Add a line to your .bash_profile in your HOME directory, with
+  `vi ~/.bash_profile`   
+  and add the following line:   
+
+  `alias ans="bash ~/<Git_xxx>/ansible/ans-menu/ans.sh "`
+
 
 ### Look & Feel
 
@@ -81,4 +93,4 @@ One of the menus.
 - version 1:
 
 
-### Issues
+### Issues & ToDo
