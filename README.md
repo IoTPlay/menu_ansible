@@ -41,7 +41,7 @@ todo
 
 The **main menu**, from which you choose other menus.
 ```
-==== MENU SYSTEM: 1) HOST & DOCKER IMAGE PREPARATION, Pvt. Registry and PROXY on rh01---, with inv_limit:[rh-02] ==================
+==== MENU SYSTEM: 1) - Host configs and Docker Images ==================
 0 : Passphrase for the ssh id_rsa
 1 : ...This Menu - Home...
 2 : MENU: Change to menu (2) - Host configs and Docker Images
@@ -57,7 +57,7 @@ The **main menu**, from which you choose other menus.
 
 One of the menus.
 ```
-==== MENU SYSTEM: 3) DOCKER IMAGE PREPARATION, Pvt. Registry---, with inv_limit:[rh-02] ==================
+==== MENU SYSTEM: 2) HOST & DOCKER PREPARATION--- ==================
 0 : Passphrase for the ssh id_rsa
 1 : MENU: Change to menu (1) - Home
 2 : Edit the inventory_limit variable, inv_limit:[rh-02]
