@@ -22,6 +22,8 @@ When we learned Ansible, we made cryptic notes, with links to other sources. May
 
 ### Command Line System Features
 
+TODO. nont completed. (ansible, host limitor, etc.)
+
 ### The Menu system
 
 Several setup files are required:
@@ -89,6 +91,19 @@ One of the menus.
 ..cmdline 1 = <1..x> - for the action.
 ----------------------------------------------------------------------
 ```
+
+### How do I use the Menu System
+
+After installation, and config, in a Terminal window, for example menus as shown above:
+
+From any menu:
+ - ` ans 1 ` - brings up the menu of menu's
+From menu 1 - menu of menus:
+ - ` ans 2 ` - opens menu 2
+From any menu, (other than menu 1):
+ - ` ans 2` - opens a vi editor, so you can change the host limitor, for all menu's to use.
+ - ` ans 17` - List all Docker images for the host limits.
+
 ### Version Tracker
 - version 1: This version.
 
