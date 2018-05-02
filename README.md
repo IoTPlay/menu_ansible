@@ -97,6 +97,7 @@ One of the menus.
 After installation, and config, in a Terminal window, for example menus as shown above:
 
 From any menu:  
+ - ` ans ` - Writes the current full menu to screen  
  - ` ans 1 ` - brings up the menu of menu's  
 From menu 1 - menu of menus:  
  - ` ans 2 ` - opens menu 2  
