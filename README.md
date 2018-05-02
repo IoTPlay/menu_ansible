@@ -37,6 +37,46 @@ Several setup files are required.,
 ### Instructions to Install the Ansible menu Scripts
 todo
 
+### Look & Feel
+
+The **main menu**, from which you choose other menus.
+```
+==== MENU SYSTEM: 1) HOST & DOCKER IMAGE PREPARATION, Pvt. Registry and PROXY on rh01---, with inv_limit:[rh-02] ==================
+0 : Passphrase for the ssh id_rsa
+1 : ...This Menu - Home...
+2 : MENU: Change to menu (2) - Host configs and Docker Images
+3 : MENU: Change to menu (3) - Docker Images
+4 : MENU: Change to menu (4) - Docker Dev on Apple Mac
+5 : MENU: Change to menu (5) - Docker Containers for Client X
+6 : MENU: Change to menu (6) - Docker Containers for Client Y
+7 : MENU: Change to menu (7) - DevOps GENERAL Commands
+----------------------------------------------------------------------
+..cmdline 1 = <1..x> - for the action.
+----------------------------------------------------------------------
+```
+
+One of the menus.
+```
+==== MENU SYSTEM: 3) DOCKER IMAGE PREPARATION, Pvt. Registry---, with inv_limit:[rh-02] ==================
+0 : Passphrase for the ssh id_rsa
+1 : MENU: Change to menu (1) - Home
+2 : Edit the inventory_limit variable, inv_limit:[rh-02]
+3 :
+6 : Registry: Private Registry details on rh01
+7 : Registry: Private Registry START on rh01 (download image budry/registry-arm)
+8 :
+9 : Registry: Images on rh01
+11 : Docker Image: Pull the proxy, and add to rh01 private registry
+12 : Docker Image: Pull the MariaDB, and add to rh01
+13 : Docker Image: Build NodeRed from Dockerfile for Mac
+14 : Docker Image: Build NodeRed from Dockerfile (usr iotp) for Arm
+15 : Docker Image: Build Mosquitto from Dockerfile (usr iotp) for Arm
+16 :
+17 : Docker Images: LIST them...
+----------------------------------------------------------------------
+..cmdline 1 = <1..x> - for the action.
+----------------------------------------------------------------------
+```
 ### Version Tracker
 - version 1:
 
