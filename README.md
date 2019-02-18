@@ -50,6 +50,11 @@ Several setup files are required:
 
   `alias ans="bash ~/<Git_xxx>/ansible/ans-menu/ans.sh "`
 
+### Settings
+The following settings needs to point to where the menu code is:
+
+1. `ansible.cfg` - this must be present in the folder ~/ansible, it has a line `inventory = ` that needs to point to where the host file is, in my case, `.../git_iotp/ansible/inventory/hosts`
+2. `.../git_iotp/ansible/ans-menu/ans_menu.ini`, and `ans_0.ini` update source file links.
 
 ### Look & Feel
 
