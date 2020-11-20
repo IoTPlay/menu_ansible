@@ -45,10 +45,15 @@ Several setup files are required:
     - `<Git_xxx>` - a local folder where you want to keep all the Ansible scripts in. I use a folder which I replicate back to Git.
 
 4. Add a line to your .bash_profile in your HOME directory, with
-  `vi ~/.bash_profile`   
+  `vi ~/.bash_profile` -- or -- for zsh on Mac   `vi ~/.zshenv`
   and add the following line:   
 
-  `alias ans="bash ~/<Git_xxx>/ansible/ans-menu/ans.sh "`
+  `alias ans="bash ~/<Git_xxx>/ansible/ans-menu/ans.sh"` 
+  
+  -- or -- 
+
+  `alias ans="bash ~/<Git_xxx>/ansible/ans-menu/ans.zsh"` 
+
 
 ### Settings
 The following settings needs to point to where the menu code is:
