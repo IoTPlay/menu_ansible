@@ -1,29 +1,39 @@
-#!/bin/bash
-# Load config file
-# The below are base variables of the menu system.
-# Replace
-#    - <user> with the user of the O/S
-#    - <Git_xxx> - a local folder where you want to keep all the Ansible scripts in. I use a folder which I replicate back to Git.
+#!/bin/zsh
+
 clear
-source ~/<Git_xxx>/ansible/ans-menu/ans_0.ini
-source "/Users/<user>/<Git_xxx>/ansible/inventory/inventory_limit.ini"
-# ------the menu ini --------------------------------------
-source ~/<Git_xxx>/ansible/ans-menu/ans_menu.ini # The menu system to use
-source ~/<Git_xxx>/ansible/ans-menu/$ans_ini
-# ------ env variables export------------------------------
-export ANSIBLE_CONFIG=$ansible_cfg
-export ANSIBLE_CONFIG="/Users/<user>/<Git_xxx>/ansible"
+# ======= CHANGE ONLY THIS ==================================
+ans_home="$HOME/iotplay/ops_ansmenus/ansible"
+
+source "$ans_home/ans-menu/ans_xcfg.ini"
+cd $ans_menus
+#-------------- ans_menu.ini Exist? -------------------------
+if [ ! -f "$ans_home/ans-menu/ans_menu.ini" ]; then
+    echo "ans_ini=ans_1.ini" >> "$ans_home/ans-menu/ans_menu.ini"
+fi
+#------------------------------------------------------------
+
+# ------the menu ini ----------------------------------------
+inv_limit_file="$ans_home/inventory/inventory_limit.ini" 
+source "$inv_limit_file"
+source "$ans_home/ans-menu/ans_menu.ini"  
+source "$ans_home/ans-menu/$ans_ini" # from ans_menu.ini
+
+# ------ env variables export--------------------------------
+export ANSIBLE_CONFIG=$ans_home
 export DOCKER_CLIENT_TIMEOUT=600
 export COMPOSE_HTTP_TIMEOUT=600
-# ---Some Variables----------------------------------------
+
+# ---Some Variables------------------------------------------
 #ansNo_play="ans$1_play"   # ie. ans2_play
-CommandDesc="a$1"        # old ansNo_desc
-CommandString="c$1"      # old cmdNo   The Command string     ie. cmd3
+CommandDesc="a$1"       
+CommandString="c$1"        #  The Command string     ie. cmd3
 #echo "test.......$ansNo_play = "${!ansNo_play}""
 
 #------------------------------------------------------------
 echo ""
-echo "==== MENU SYSTEM: $ans_menu_name, with inv_limit:[$limit] =================="
+echo "|==== MENU SYSTEM: $ans_menu_name  ================"
+echo "|     with inv_limit:[$limit], menu host: [$host_used] "
+echo "|-----------------------------------------------------------------------------|"
 #-----------1st cmdline for Ansible commands ----------------------------------------
 case "$1" in
 
@@ -32,7 +42,7 @@ case "$1" in
     #for i in {0..40}
     for (( i=0; i<=$ans_menu_count; i++ ))
         do
-            #eval var1="ans"$i"_opt"             #creating a var ans1_opt
+            #eval var1="ans"$i"_opt"    #creating a var ans1_opt
             eval desc="a"$i             #Creating a var ans1_desc
             #echo "${!var1} : ${!var2}"
             echo "$i : ${!desc}"
