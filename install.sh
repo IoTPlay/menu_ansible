@@ -16,7 +16,7 @@ if [ $testEcho == 1 ]; then   # Error Reporting
 fi 
 
 function cloneinDir () {
-  #echo ë"....errorlog: var1 = "$1", var2 = "$2" "
+  #echo "....errorlog: var1 = "$1", var2 = "$2" "
   mkdir -p "${HOME}/$1"
   git clone $2 "${HOME}/$1" 
 }

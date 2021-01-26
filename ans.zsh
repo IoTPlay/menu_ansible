@@ -5,6 +5,7 @@ clear
 ans_home="$HOME/iotplay/ops_ansmenus/ansible"
 source "$HOME/iotplay/GitHub/menu_ansible/ans_xcfg.ini"
 #-------------- ans_menu.ini Exist? -------------------------
+mkdir -p "$ans_menuvars"
 if [ ! -f "$ans_menuvars/cfg1.ini" ]; then # Keeping of menu we were in last - was ans_menu.ini
     echo "ans_ini=ans_1.ini" > "$ans_menuvars/cfg1.ini"
 fi
