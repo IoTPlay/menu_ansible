@@ -21,7 +21,6 @@ varloc1=iotplay
 varLoc1=ops_ans_menus
 gitRepo=https://github.com/IoTPlay/ops_ansmenus.git
 
-mkdir $HOME/$varloc1
 mkdir $HOME/$varloc1/$varloc2
 cd $varLoc1/$varloc2
 
