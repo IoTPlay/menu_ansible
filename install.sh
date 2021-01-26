@@ -12,7 +12,7 @@ gitRepo1=https://github.com/IoTPlay/menu_ansible.git
 gitRepo2=https://github.com/IoTPlay/ops_ansmenus.git
 
 if [ $testEcho == 1 ]; then   # Error Reporting
-echo "...errorlog: varloc1 = $!{homeVar}/$varloc1, varloc2 = $HOME/$varloc2" 
+echo "...errorlog: varloc1 = ${!homeVar}/$varloc1, varloc2 = $HOME/$varloc2" 
 fi 
 
 #mkdir -p $HOME/$varloc1
