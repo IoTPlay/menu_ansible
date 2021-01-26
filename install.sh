@@ -5,13 +5,14 @@
 
 # --- clone the menu_ansible system, and ops_ansmenus and Ansible playbooks from github ------------------
 testEcho=1 ## error reporting - 1 for on.
+homeVar="$HOME"
 varloc1=iotplay/GitHub/menu_ansible
 varloc2=iotplay/ops_ans_menus
 gitRepo1=https://github.com/IoTPlay/menu_ansible.git
 gitRepo2=https://github.com/IoTPlay/ops_ansmenus.git
 
 if [ $testEcho == 1 ]; then   # Error Reporting
-echo "...errorlog: varloc1 = $HOME/$varloc1, varloc2 = $HOME/$varloc2" 
+echo "...errorlog: varloc1 = $!{homeVar}/$varloc1, varloc2 = $HOME/$varloc2" 
 fi 
 
 #mkdir -p $HOME/$varloc1
