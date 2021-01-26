@@ -4,14 +4,18 @@
 # wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/install.sh | sh
 
 # --- clone the menu_ansible system, and ops_ansmenus and Ansible playbooks from github ------------------
-
+testEcho=1 ## error reporting - 1 for on.
 varloc1=iotplay/GitHub/menu_ansible
 varloc2=iotplay/ops_ans_menus
 gitRepo1=https://github.com/IoTPlay/menu_ansible.git
 gitRepo2=https://github.com/IoTPlay/ops_ansmenus.git
 
-mkdir -p $HOME/$varloc1
-mkdir -p $HOME/$varloc2
+if [[ $testEcho == 1 ]]; then   # Error Reporting
+echo "log: varloc1 = $varloc1, varloc2 = $varloc2"
+fi 
+
+#mkdir -p $HOME/$varloc1
+#mkdir -p $HOME/$varloc2
 #cd $varLoc1
 #git clone $gitRepo1
 #cd $varLoc2
