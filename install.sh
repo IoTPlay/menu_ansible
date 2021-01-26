@@ -3,28 +3,18 @@
 # To run this script - in host, in $HOME directory - run the following command
 # wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/install.sh | sh
 
-# --- clone the menu_ansible system from github ------------------
-varloc1=iotplay
-varLoc2=GitHub
-varLoc3=menu_ansible
-gitRepo=https://github.com/IoTPlay/menu_ansible.git
+# --- clone the menu_ansible system, and ops_ansmenus and Ansible playbooks from github ------------------
+varloc1=iotplay/GitHub/menu_ansible
+varloc2=iotplay/ops_ans_menus
+gitRepo1=https://github.com/IoTPlay/menu_ansible.git
+gitRepo2=https://github.com/IoTPlay/ops_ansmenus.git
 
-mkdir $HOME/$varloc1
-mkdir $HOME/$varloc1/$varloc2  
-mkdir $HOME/$varloc1/$varloc2/$varloc3
-cd $varLoc1/$varloc2/$varloc3
-
-git clone $gitRepo
-
-# --- clone the Rouxhome ops_ansmenus and Ansible playbooks -----
-varloc1=iotplay
-varLoc1=ops_ans_menus
-gitRepo=https://github.com/IoTPlay/ops_ansmenus.git
-
-mkdir $HOME/$varloc1/$varloc2
-cd $varLoc1/$varloc2
-
-git clone $gitRepo
+mkdir -p $HOME/$varloc1
+mkdir -p $HOME/$varloc2
+cd $varLoc1
+git clone $gitRepo1
+cd $varLoc2
+git clone $gitRepo2
 
 # --- Install ansible, docker, python, zsh ---------------------------
 # --- Ubuntu, RPi ---
