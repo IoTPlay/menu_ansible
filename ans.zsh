@@ -5,8 +5,8 @@ clear
 ans_home="$HOME/iotplay/ops_ansmenus/ansible"
 source "$HOME/iotplay/GitHub/menu_ansible/ans_xcfg.ini"
 #-------------- ans_menu.ini Exist? -------------------------
-if [ ! -f "$ans_home/menus/vars/cfg1.ini" ]; then # Keeping of menu we were in last - was ans_menu.ini
-    echo "ans_ini=ans_1.ini" > "$ans_home/menus/vars/cfg1.ini"
+if [ ! -f "$ans_menuvars/cfg1.ini" ]; then # Keeping of menu we were in last - was ans_menu.ini
+    echo "ans_ini=ans_1.ini" > "$ans_menuvars/cfg1.ini"
 fi
 if [ ! -f "$ans_menuvars/cfg2.ini" ]; then # keeping the last command
     touch $ans_menuvars/cfg2.ini
@@ -15,7 +15,7 @@ fi
 cd $ans_menus  #/menus ?
 inv_limit_file="$ans_home/inventory/inventory_limit.ini" 
 source "$inv_limit_file"
-source "$ans_home/menus/vars/cfg1.ini"
+source "$ans_menuvars/cfg1.ini"
 source "$ans_home/menus/$ans_ini" # from cfg1.ini - chooses the menu in /menus/
 
 # --- Variables----------------------------------------------
