@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # To run this script - in host, in $HOME directory - run the following command
-# wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/install.sh | sh
+# wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/install.sh | bash
 
 # --- clone the menu_ansible system, and ops_ansmenus and Ansible playbooks from github ------------------
 testEcho=1 ## error reporting - 1 for on.
@@ -11,7 +11,7 @@ gitRepo1=https://github.com/IoTPlay/menu_ansible.git
 gitRepo2=https://github.com/IoTPlay/ops_ansmenus.git
 
 if [ $testEcho == 1 ]; then   # Error Reporting
-echo "log: varloc1 = $varloc1, varloc2 = $varloc2"
+echo "...errorlog: varloc1 = $HOME/$varloc1, varloc2 = $HOME/$varloc2"
 fi 
 
 #mkdir -p $HOME/$varloc1
