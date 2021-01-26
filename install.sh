@@ -10,7 +10,7 @@ varloc2=iotplay/ops_ans_menus
 gitRepo1=https://github.com/IoTPlay/menu_ansible.git
 gitRepo2=https://github.com/IoTPlay/ops_ansmenus.git
 
-if [[ $testEcho == 1 ]]; then   # Error Reporting
+if [ $testEcho == 1 ]; then   # Error Reporting
 echo "log: varloc1 = $varloc1, varloc2 = $varloc2"
 fi 
 
