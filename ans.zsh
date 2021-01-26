@@ -20,7 +20,7 @@ source "$ans_menuvars/cfg1.ini"
 source "$ans_home/menus/$ans_ini" # from cfg1.ini - chooses the menu in /menus/
 
 # --- Variables----------------------------------------------
-testEcho=2 # Error Reporting
+testEcho=0 # Error Reporting
 # $1 is the first variable after the command, like 'ans 1'
 CommandDesc="a$1"       
 CommandString="c$1"
@@ -29,6 +29,7 @@ LastCommandNo=$(<$ans_menuvars/cfg2.ini)
 if [[ $testEcho == 1 ]]; then   # Error Reporting
     echo "Log: Variable TestEcho is = 1"
     echo "Log: var ans_menus is = $ans_menus"
+    echo "Log: folder inv_limit_file = $inv_limit_file"
     echo "Log: vars CommandDesc = $CommandDesc , and CommandString = $CommandString";
     echo "Log: ans_menu_count = $ans_menu_count ";
 fi
