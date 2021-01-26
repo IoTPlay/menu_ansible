@@ -5,7 +5,7 @@ Now moved to .zsh, the new Mac standard. Done by:
 - renaming ans.sh to ans.zsh
 - naming the use of ans.sh in all the .ini scripts to ans.zsh
 - editing settings file of zsh to know where the ans folder is with `nano ~/.zshenv`, and adding this line:
-    - alias ans="bash ~/bitbucket/git_iotp/ansible/ans-menu/ans.zsh "
+    - echo alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" >> ${HOME}/.zshenv
 
 ## Links
 - zsh Grammer: http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html
