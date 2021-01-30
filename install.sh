@@ -15,14 +15,15 @@ if [ $testEcho == 1 ]; then   # Error Reporting
   echo "...."
 fi 
 
+function cloneinDir () {
+  #echo "....errorlog: var1 = "$1", var2 = "$2" "
+  mkdir -p "${HOME}/$1"
+  git clone --depth 1 $2 "${HOME}/$1" 
+}
+
 case ${1} in 
 
   "")
-    function cloneinDir () {
-      #echo "....errorlog: var1 = "$1", var2 = "$2" "
-      mkdir -p "${HOME}/$1"
-      git clone --depth 1 $2 "${HOME}/$1" 
-    }
     cloneinDir ${varloc1} ${gitRepo1}
     cloneinDir ${varloc2} ${gitRepo2}
 
