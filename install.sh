@@ -36,4 +36,4 @@ sudo chsh -s /bin/zsh # Change default shell to zsh
 
 echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.zshenv
 
-echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.bash_profile
+echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.bashrc

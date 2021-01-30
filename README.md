@@ -49,6 +49,8 @@ Several setup files are required:
   and add the following line:   
 
 `echo alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" >> ${HOME}/.zshenv`
+and for bash (working):
+`echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.bashrc`
 
 
 ### Settings
@@ -118,3 +120,42 @@ From any menu, (other than menu 1):
 - No1: Add a menu version number.
 - No2: ans_menu.ini writes a funny file as it switches from menu to menu.
 - No3: More instructions of Ansible variables, hosts, playbooks.
+
+
+# IoTP's Menu system & Ansible ssh to hosts
+
+## Setting up this menu system for Ansible from scratch
+
+1. Clone the "menu system" from https://github.com/IoTPlay/menu_ansible and follow the instructions in the [README file](https://github.com/IoTPlay/menu_ansible/blob/master/README.md).    
+
+2. And edit ansible.cfg, in the menu system root to point to `hosts`
+
+## ansible ssh access from controlling host to remote host
+
+3. Setup SSH key pair, instructions: https://www.freecodecamp.org/news/the-ultimate-guide-to-ssh-setting-up-ssh-keys/
+
+-- and -- 
+
+4. Setting up Passwordless SSH login: https://linuxize.com/post/how-to-setup-passwordless-ssh-login/
+
+|# | Command / file        | Step 
+|--|-----------------------|-----
+|01|~/.ssh/authorized_keys | On External host - we will Generate a public authentication key and append it to the remote hosts
+|02|ls -al ~/.ssh/id_*.pub | existing SSH keys present?, If not, next step.
+|03|ssh-keygen -t rsa -b 4096 -C "email addr" | Generate a new 4096 bits SSH key pair
+|04|ssh-copy-id remote_uname@ip_addr | copy your public key to your server, for instance: 
+|04a| rh01     | ssh-copy-id -p2279 iotp@rh01.hosting.lan
+|04a| homedig2 | ssh-copy-id -p2279 iotp@homedig2.hosting.lan
+|05|vi /etc/ssh/sshd_config | Changes to config files on remote host:
+|a.| | PasswordAuthentication no
+|b.| | ChallengeResponseAuthentication no
+|c.| | UsePAM no
+|06|sudo systemctl restart ssh | Debian - restart ssh 
+
+Or, if `ssh-copy-id` not available: 
+```
+cat ~/.ssh/id_rsa.pub | ssh remote_username@server_ip_address "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+```
+## Running the `ans` command 
+
+echo alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" >> ${HOME}/.zshenv
