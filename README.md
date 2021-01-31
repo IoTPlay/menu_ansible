@@ -1,4 +1,6 @@
-# menu_ansible
+# IoTP's Menu system & Ansible ssh to hosts
+
+## menu_ansible
 
 ### What it Does
 An sh-based scripting menu system to manage remote resources using Ansible playbooks.
@@ -122,7 +124,6 @@ From any menu, (other than menu 1):
 - No3: More instructions of Ansible variables, hosts, playbooks.
 
 
-# IoTP's Menu system & Ansible ssh to hosts
 
 ## Setting up this menu system for Ansible from scratch
 
@@ -142,10 +143,10 @@ From any menu, (other than menu 1):
 |--|-----------------------|-----
 |01|~/.ssh/authorized_keys | On External host - we will Generate a public authentication key and append it to the remote hosts
 |02|ls -al ~/.ssh/id_*.pub | existing SSH keys present?, If not, next step.
-|03|ssh-keygen -t rsa -b 4096 -C "email addr" | Generate a new 4096 bits SSH key pair
-|04|ssh-copy-id remote_uname@ip_addr | copy your public key to your server, for instance: 
+|03|**Copy Keys to hosts**  | ssh-keygen -t rsa -b 4096 -C "email addr" | Generate a new 4096 bits SSH key pair
+|04| **ssh-copy-id** remote_uname@ip_addr - copy your public key to your server, for instance: 
 |04a| rh01     | ssh-copy-id -p2279 iotp@rh01.hosting.lan
-|04a| homedig2 | ssh-copy-id -p2279 iotp@homedig2.hosting.lan
+|04b| homedig2 | ssh-copy-id -p2279 iotp@homedig2.hosting.lan
 |05|vi /etc/ssh/sshd_config | Changes to config files on remote host:
 |a.| | PasswordAuthentication no
 |b.| | ChallengeResponseAuthentication no
