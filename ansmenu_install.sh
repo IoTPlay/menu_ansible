@@ -36,7 +36,7 @@ case ${1} in
     sudo apt -y install zsh         # https://symeonchen.com/2018/03/11/install_zsh_on_the_raspberry_pi/
     # --- settings ---
     sudo chsh -s /bin/zsh # Change default shell to zsh
-    #echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.zshenv
+    echo 'alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" ' >> ${HOME}/.zshenv
     echo 'alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" ' >> ${HOME}/.bashrc
     ;;
   
