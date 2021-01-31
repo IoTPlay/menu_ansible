@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # To run this script - in host, in $HOME directory - run the following command
-# wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/install.sh | bash
+# wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/ansmenu_install.sh | bash
 
 # --- clone the menu_ansible system, and ops_ansmenus and Ansible playbooks from github ------------------
 testEcho=2 ## error reporting - 1 for on.
@@ -36,8 +36,8 @@ case ${1} in
     sudo apt -y install zsh         # https://symeonchen.com/2018/03/11/install_zsh_on_the_raspberry_pi/
     # --- settings ---
     sudo chsh -s /bin/zsh # Change default shell to zsh
-    echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.zshenv
-    echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.bashrc
+    #echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.zshenv
+    echo 'alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" '' >> ${HOME}/.bashrc
     ;;
   
   "--help")
