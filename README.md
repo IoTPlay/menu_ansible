@@ -1,5 +1,12 @@
 # IoTP's Menu system & Ansible ssh to hosts
 
+## INSTALL ans_menu with its Config file ops_ansmenus
+
+1- Run ansmenu_install.sh by typing the following in a Terminal:
+
+`wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/ansmenu_install.sh | bash`
+
+
 ## menu_ansible
 
 ### What it Does
