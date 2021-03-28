@@ -2,7 +2,7 @@
 clear
 
 # ======= CHANGE ONLY THIS ==================================
-ans_home="$HOME/iotplay/ops_ansmenus"
+ans_home="$HOME/iotplay/GitHub/ops_ansmenus"
 source "$HOME/iotplay/GitHub/menu_ansible/ans_xcfg.ini"
 #-------------- ans_menu.ini Exist? -------------------------
 mkdir -p "$ans_menuvars"
