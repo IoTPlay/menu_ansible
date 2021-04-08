@@ -7,6 +7,37 @@
 `wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/ansmenu_install.sh | bash`
 
 
+### Instructions to Install the Ansible menu Scripts
+
+1. Clone this repo to local
+2. Update the variables as per instructions in these files, about your file locations in ans_0.ini, ans_x.ini, and ans.sh.
+3. The instructions, replace:
+    - `<user>` with the user of the O/S  (We use Mac)
+    - `<Git_xxx>` - a local folder where you want to keep all the Ansible scripts in. I use a folder which I replicate back to Git.
+
+4. Add a line to your .bash_profile in your HOME directory, with
+  `vi ~/.bash_profile` -- or -- for zsh on Mac   `vi ~/.zshenv`
+  and add the following line:   
+
+`echo alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" >> ${HOME}/.zshenv`    
+
+and for bash (working):    
+
+`echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.bashrc`
+
+My .zshrc looks as follows:
+
+```
+export PATH=$PATH:$HOME/Library/Python/3.8/lib/python/site-packages/pip/:$HOME/Library/Python/3.8/bin
+alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh"
+```
+
+### Settings
+The following settings needs to point to where the menu code is:
+
+1. `ansible.cfg` - this must be present in the folder ~/ansible, it has a line `inventory = ` that needs to point to where the host file is, in my case, `.../git_iotp/ansible/inventory/hosts`
+
+
 ## menu_ansible
 
 ### What it Does
@@ -45,27 +76,6 @@ Several setup files are required:
 |4|ans_menu.ini|The variable of the active menu to run
 |5|ans.sh| The code that runs the menu|
 
-### Instructions to Install the Ansible menu Scripts
-
-1. Clone this repo to local
-2. Update the variables as per instructions in these files, about your file locations in ans_0.ini, ans_x.ini, and ans.sh.
-3. The instructions, replace:
-    - `<user>` with the user of the O/S  (We use Mac)
-    - `<Git_xxx>` - a local folder where you want to keep all the Ansible scripts in. I use a folder which I replicate back to Git.
-
-4. Add a line to your .bash_profile in your HOME directory, with
-  `vi ~/.bash_profile` -- or -- for zsh on Mac   `vi ~/.zshenv`
-  and add the following line:   
-
-`echo alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" >> ${HOME}/.zshenv`
-and for bash (working):
-`echo "alias ans="zsh $HOME/iotplay/GitHub/menu_ansible/ans.zsh" " >> ${HOME}/.bashrc`
-
-
-### Settings
-The following settings needs to point to where the menu code is:
-
-1. `ansible.cfg` - this must be present in the folder ~/ansible, it has a line `inventory = ` that needs to point to where the host file is, in my case, `.../git_iotp/ansible/inventory/hosts`
 
 ### Look & Feel
 
