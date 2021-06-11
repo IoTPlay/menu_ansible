@@ -54,7 +54,7 @@ case ${1} in
   ;;
   
   "--menu")
-    cloneinDir ${varloc2} ${gitRepo2}
+    git clone ${gitRepo2} ${varloc2}
   ;;
 
 esac
