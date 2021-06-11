@@ -5,8 +5,12 @@
 ## TDTR version...
 
 1. Run ansmenu_install.sh by typing the following in a Terminal: `wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/ansmenu_install.sh | bash`
-1. Edit the variables in `ansmenu_install.sh` - specially where your menu system is on GitHub, variable `gitRepo2`. You will find this file in `sudo $HOME/iotplay/GitHub/menu_ansible/ansmenu_install.sh`.
+
+1. Edit the variables in `ansmenu_install.sh` - specially where your menu system is on GitHub, variable `gitRepo2`. 
+You will find this file in `sudo $HOME/iotplay/GitHub/menu_ansible/ansmenu_install.sh`.
+
 1. Log-off, and then on - for new alias commands to take effect.
+
 1. Install your ops_menu with the command `$HOME/iotplay/GitHub/menu_ansible/ansmenu_install.sh --menu`. You can also do same command --help.
 
 
