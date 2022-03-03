@@ -2,8 +2,8 @@
 clear
 
 # ======= CHANGE ONLY THIS ==================================
-ans_home="$HOME/iotplay/GitHub/ops_ansmenus"
-source "$HOME/iotplay/GitHub/menu_ansible/ans_xcfg.ini"
+ans_home="$HOME/GitHub/IoTPlay/ops_ansmenus"
+source "$HOME/GitHub/IoTPlay/menu_ansible/ans_xcfg.ini"
 #-------------- ans_menu.ini Exist? -------------------------
 mkdir -p "$ans_menuvars"
 if [ ! -f "$ans_menuvars/cfg1.ini" ]; then # Keeping of menu we were in last - was ans_menu.ini
