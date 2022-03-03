@@ -6,9 +6,9 @@
 # --- clone the menu_ansible system, and ops_ansmenus and Ansible playbooks from github ------------------
 testEcho=2 ## error reporting - 1 for on.
 varloc1=iotplay/GitHub/menu_ansible
-varloc2=iotplay/GitHub/ops_ansmenus
+# varloc2=iotplay/GitHub/ops_ansmenus
 gitRepo1="https://github.com/IoTPlay/menu_ansible.git"
-gitRepo2="https://github.com/IoTPlay/ops_ansmenus.git"
+# gitRepo2="https://github.com/IoTPlay/ops_ansmenus.git"
 
 if [ $testEcho == 1 ]; then   # Error Reporting
   echo "...errorlog: homeVar = ${HOME}, varloc1 = $varloc1, varloc2 = $varloc2" 
@@ -25,7 +25,7 @@ case ${1} in
 
   "")
     cloneinDir ${varloc1} ${gitRepo1}
-    cloneinDir ${varloc2} ${gitRepo2}
+#    cloneinDir ${varloc2} ${gitRepo2}
 
     # --- Install ansible, docker, python, zsh ---------------------------
     # --- Ubuntu, RPi ---
