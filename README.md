@@ -8,10 +8,10 @@
    - Install brew with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
    - then`brew install wget`
 
-3. Run ansmenu_install.sh by typing the following in a Terminal: `wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/ansmenu_install.sh | bash`
+1. Run ansmenu_install.sh by typing the following in a Terminal: `wget -O - https://raw.githubusercontent.com/IoTPlay/menu_ansible/master/ansmenu_install.sh | bash`
 
 1. Edit the variables in `ansmenu_install.sh` - specially where your menu system is on GitHub, variable `gitRepo2`. 
-You will find this file in `sudo $HOME/iotplay/GitHub/menu_ansible/ansmenu_install.sh`.
+You will find this file in `nano $HOME/iotplay/GitHub/menu_ansible/ansmenu_install.sh`.
 
 1. Log-off, and then on - for new alias commands to take effect.
 
