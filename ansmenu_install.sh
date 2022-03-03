@@ -8,7 +8,7 @@ testEcho=2 ## error reporting - 1 for on.
 varloc1=GitHub/IoTPlay/menu_ansible
 varloc2=Git/IoTPlay/ops_ansmenus
 gitRepo1="https://github.com/IoTPlay/menu_ansible.git"
-gitRepo2="https://git.familyroux.com/iotplay/ops_ansmenus.git"
+gitRepo2="https://git.<yourDomain>/<yourUid>/ops_ansmenus.git"
 
 if [ $testEcho == 1 ]; then   # Error Reporting
   echo "...errorlog: homeVar = ${HOME}, varloc1 = $varloc1, varloc2 = $varloc2" 
