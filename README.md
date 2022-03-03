@@ -65,7 +65,7 @@ We use Apple Macs, and manage Raspberry Pi's, both from my home LAN, and over th
 When we learned Ansible, we made cryptic notes, with links to other sources. Maybe this will be useful to others. Here are the links to the notes:
 - [Ansible - General](https://github.com/IoTPlay/docker-iotplay-standards/blob/master/README/READ2-ansible.md)
 - [Ansible Vault - how to deal with secrets](https://github.com/IoTPlay/docker-iotplay-standards/blob/master/README/READ3-ansible-vault.md)
-- [Managing doocker with Ansible](https://github.com/IoTPlay/docker-iotplay-standards/blob/master/README/READ4-ansible_docker.md)
+- [Managing docker with Ansible](https://github.com/IoTPlay/docker-iotplay-standards/blob/master/README/READ4-ansible_docker.md)
 
 ### Command Line System Features
 
