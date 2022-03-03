@@ -5,8 +5,8 @@
 
 # --- clone the menu_ansible system, and ops_ansmenus and Ansible playbooks from github ------------------
 testEcho=2 ## error reporting - 1 for on.
-varloc1=iotplay/GitHub/menu_ansible
-# varloc2=iotplay/GitHub/ops_ansmenus
+varloc1=GitHub/IoTPlay/menu_ansible
+varloc2=Git/IoTPlay/ops_ansmenus
 gitRepo1="https://github.com/IoTPlay/menu_ansible.git"
 gitRepo2="https://git.familyroux.com/iotplay/ops_ansmenus.git"
 
