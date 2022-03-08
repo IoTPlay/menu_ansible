@@ -169,6 +169,7 @@ From any menu, (other than menu 1):
 
 |# | Command / file        | Step 
 |--|-----------------------|-----
+|00|ssh-keygen | Generate your pub/priv key pair (normally in ~/.ssh/ file names id_rsa.pub and id_rsa
 |01|~/.ssh/authorized_keys | On External host - we will Generate a public authentication key and append it to the remote hosts
 |02|ls -al ~/.ssh/id_*.pub | existing SSH keys present?, If not, next step.
 |03|**Copy Keys to hosts**  | ssh-keygen -t rsa -b 4096 -C "email addr" | Generate a new 4096 bits SSH key pair
